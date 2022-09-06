@@ -1,2 +1,2 @@
 # Code-book
-It is my code bool for ICPC.
+It is my codebook for ICPC.
