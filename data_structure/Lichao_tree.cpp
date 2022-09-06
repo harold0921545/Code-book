@@ -1,4 +1,3 @@
-const int C = 5e5 + 25;
 struct Lichaotree{
     struct line{
         int m, k;
