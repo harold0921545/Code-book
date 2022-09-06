@@ -8,8 +8,8 @@ struct Persistent_ST{
             return;
         }
         int mid = l + r >> 1;
-        build(l, mid, lc[p]);
-        build(mid + 1, r, rc[p]);
+        build(l, mid, lc[p], data);
+        build(mid + 1, r, rc[p], data);
     }
 
     void upd(int l,int r,int &p,int pre,int q,int k){
