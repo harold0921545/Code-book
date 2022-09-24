@@ -1,4 +1,4 @@
-int a[1005][1005];
+int a[N][N];
 int n, MOD;
 int fpow(int x, int p){
     int r = 1;

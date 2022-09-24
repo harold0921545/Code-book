@@ -1,13 +1,4 @@
-int m[15],a[15],mi[15], n;
-pii exgcd(int a, int b){
-    if(b == 0) return MP(1, 0);
-    else {
-        pii tmp = exgcd(b, a % b);
-        int t = tmp.F;
-        tmp.F = tmp.S, tmp.S = t - tmp.S * (a / b);
-        return tmp;
-    }
-}
+int m[N],a[N],mi[N], n;
 int CRT(){
     int M = 1, ans =0;
     for(int i = 1; i <= n; i++)
