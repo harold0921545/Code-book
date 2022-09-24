@@ -1,35 +1,36 @@
-int trie[27][N], idx, cnt[N];
-
-void add(string s){
-    int u = 0;
-    for (int i = 0; i < s.size(); i++){
-        int w = s[i] - 'a';
-        if (trie[w][u] == 0)
-            trie[w][u] = ++idx;
-        u = trie[w][u];
-        cnt[u]++;
+int idx, cnt[N];
+struct Trie{
+    int ch[26];
+    void add(string s){
+        int u = 0;
+        for (int i = 0; i < s.size(); i++){
+            int w = s[i] - 'a';
+            if (tr[u].ch[w] == 0)
+                tr[u].ch[w] = ++idx;
+            u = tr[u].ch[w];
+            cnt[u]++;
+        }
     }
-}
-
-void del(string s){
-    int u = 0;
-    for (int i = 0; i < s.size(); i++){
-        int w = s[i] - 'a';
-        int nxt = trie[w][u];
-        cnt[nxt]--;
-        if (cnt[nxt] == 0)
-            trie[w][u] = 0;
-        u = nxt;
+    void del(string s){
+        int u = 0;
+        for (int i = 0; i < s.size(); i++){
+            int w = s[i] - 'a';
+            int nxt = tr[u].ch[w];
+            cnt[nxt]--;
+            if (cnt[nxt] == 0)
+                tr[u].ch[w] = 0;
+            u = nxt;
+        }
     }
-}
-bool match(string s){
-    int u = 0;
-    for (int i = 0; i < s.size(); i++){
-        int w = s[i] - 'a';
-        if (cnt[trie[w][u]] > 0)
-            u = trie[w ^ 1][u];
-        else 
-            return false;
+    bool match(string s){
+        int u = 0;
+        for (int i = 0; i < s.size(); i++){
+            int w = s[i] - 'a';
+            if (cnt[tr[u].ch[w]] > 0)
+                u = tr[u].ch[w];
+            else 
+                return false;
+        }
+        return true;
     }
-    return true;
-}
+} tr[N];
