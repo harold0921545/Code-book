@@ -43,6 +43,6 @@ bool twosat(){
             if(blg[i] < blg[i + n])
                 ans.pb(0); // choose i
             else 
-                ans.pb(1); // coose i + n
+                ans.pb(1); // choose i + n
     }
 }
