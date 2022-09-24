@@ -1,14 +1,5 @@
 int a[N][N];
 int n, MOD;
-int fpow(int x, int p){
-    int r = 1;
-    for (; p; p >>= 1){
-        if (p & 1)
-            (r *= x) %= MOD;
-        (x *= x) %= MOD;
-    }
-    return r;
-}
 void gaussian_elimination_mod(){
     for (int i = 1; i <= n; i++){
         if (a[i][i] == 0){
