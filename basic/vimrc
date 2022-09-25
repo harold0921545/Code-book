@@ -1,0 +1,5 @@
+set nocp nu rnu cin ai hls is si ru sc cul ic
+set wrap autowrite scs lbr sm sta
+set ts=4 sw=4 mouse=a bg=dark
+hi cursorline cterm=bold ctermbg=NONE
+syntax enable
