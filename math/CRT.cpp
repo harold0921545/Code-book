@@ -1,3 +1,4 @@
+// ans % m[i] == a[i]
 int m[N],a[N],mi[N], n;
 int CRT(){
     int M = 1, ans =0;
