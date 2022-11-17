@@ -4,7 +4,7 @@ vector<pii> convexhull(){
     for (int i = 0; i < node.size(); i++){
         while (hull.size() >= 2){
             int sz = hull.size() - 1;
-            if (cross({hull[sz].F - hull[sz - 1].F, hull[sz].S - hull[sz - 1].S}, {node[i].F - hull[sz - 1].F, node[i].S - hull[sz - 1].S}) >= 0)
+            if (cross({hull[sz].X - hull[sz - 1].X, hull[sz].Y - hull[sz - 1].Y}, {node[i].X - hull[sz - 1].X, node[i].Y - hull[sz - 1].Y}) >= 0)
                 hull.pop_back();
             else
                 break;
@@ -16,7 +16,7 @@ vector<pii> convexhull(){
     for (int i = 0; i < node.size(); i++){
         while (hull.size() >= 2){
             int sz = hull.size() - 1;
-            if (cross({hull[sz].F - hull[sz - 1].F, hull[sz].S - hull[sz - 1].S}, {node[i].F - hull[sz - 1].F, node[i].S - hull[sz - 1].S}) <= 0)
+            if (cross({hull[sz].X - hull[sz - 1].X, hull[sz].Y - hull[sz - 1].Y}, {node[i].X - hull[sz - 1].X, node[i].Y - hull[sz - 1].Y}) <= 0)
                 hull.pop_back();
             else
                 break;
