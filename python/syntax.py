@@ -5,10 +5,7 @@ a = list(map(int, input().split()))
 x = [int(i) for i in a]
 # input 2D array
 n = int(input())
-line = [[0] * n] * n
-for i in range(n):
-    line[i] = input().split()
-    line[i] = [int(j) for j in line[i]]
+a = [[int(i) for i in input().split()] for j in range(n)]
 # set
 st = set()
 st.add()
