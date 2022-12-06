@@ -12,7 +12,7 @@ vector<int> match(string a,string b){
         while (j != -1 && a[i] != b[j])
             j = f[j];
         if (j == b.size() - 1)
-            ans.pb(i - j), j = f[j];
+            ans.pb(i - j);
     }
     return ans;
 }
