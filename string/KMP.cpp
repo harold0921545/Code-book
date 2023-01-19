@@ -1,4 +1,5 @@
-int f[N]; // failure function
+int f[N]; // failure function, longest common prefix and suffix(s[0~f[i]-1] == s[i-f[i]+1~i])
+// f[i + 1] => s[i]
 vector<int> match(string a,string b){
     vector<int> ans;
     f[0] = -1, f[1] = 0;

@@ -1,3 +1,5 @@
+//z[i] = longest common prefix(s[0~z[i]] == s[i~i+z[i]])
+//match: let s = a + b, calculate Z value of s
 int z[N];
 vector<int> Z_val(string s){
     int l = 0, r = 0;
