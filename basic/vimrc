@@ -5,3 +5,4 @@ set wrap autowrite scs lbr sm sta
 set ts=4 sw=4 mouse=a bg=dark
 hi cursorline cterm=bold ctermbg=NONE
 syntax enable
+:inoremap {<CR> {<CR>}<Esc>ko

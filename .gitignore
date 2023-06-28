@@ -55,4 +55,4 @@ dkms.conf
 *.log
 *.gz
 *.toc
-
+*.json
