@@ -56,3 +56,5 @@ dkms.conf
 *.gz
 *.toc
 *.json
+codebook.fdb_latexmk
+codebook.fls
